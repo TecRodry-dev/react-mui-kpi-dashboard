@@ -18,6 +18,7 @@ import InsightsRoundedIcon from '@mui/icons-material/InsightsRounded'
 import { useAuth } from '../context/AuthContext.jsx'
 import { roles } from '../data/mockData.js'
 import { tokens } from '../theme.js'
+import ParticlesBackground from '../components/ParticlesBackground.jsx'
 
 // Instancia de axios ya configurada apuntando a una API .NET Core.
 // En este demo no hay backend real, así que la llamada se simula
@@ -84,26 +85,40 @@ export default function Login() {
   return (
     <Box
       sx={{
+        position: 'relative',
         minHeight: '100vh',
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: 'background.default',
-        px: 2,
+        overflow: 'hidden',
+        bgcolor: tokens.bg,
+        backgroundImage: `radial-gradient(circle at 20% 20%, ${tokens.surface} 0%, ${tokens.bg} 55%)`,
+        boxSizing: 'border-box',
+        px: { xs: 2.5, sm: 4 },
+        py: { xs: 4, sm: 6 },
       }}
     >
+      <ParticlesBackground />
+
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
+        style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 400 }}
       >
         <Paper
           elevation={0}
           sx={{
-            width: 380,
-            maxWidth: '100%',
-            p: 4,
+            width: '100%',
+            maxWidth: 400,
+            mx: 'auto',
+            boxSizing: 'border-box',
+            p: { xs: 3, sm: 4 },
             borderRadius: 3,
+            backgroundColor: 'rgba(245, 247, 250, 0.92)',
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.35)',
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25, mb: 0.5 }}>
