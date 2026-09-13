@@ -34,7 +34,7 @@ export default function ModuleCard({ module, allowed }) {
         size="small"
         sx={{
           alignSelf: 'flex-start',
-          bgcolor: allowed ? 'rgba(63,168,140,0.14)' : 'rgba(147,169,166,0.14)',
+          bgcolor: allowed ? 'rgba(74, 107, 168, 0.14)' : 'rgba(139, 149, 170, 0.14)',
           color: allowed ? 'primary.main' : 'text.secondary',
           fontWeight: 600,
         }}

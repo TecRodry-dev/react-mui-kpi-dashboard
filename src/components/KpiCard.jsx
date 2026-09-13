@@ -38,7 +38,7 @@ export default function KpiCard({ kpi, index = 0 }) {
           justifyContent: 'space-between',
           bgcolor: 'background.paper',
           background: kpi.hero
-            ? 'linear-gradient(160deg, rgba(63,168,140,0.14), rgba(22,36,42,0) 70%)'
+            ? 'linear-gradient(160deg, rgba(74, 107, 168, 0.14), rgba(234, 245, 245, 0) 70%)'
             : undefined,
         }}
       >

@@ -80,7 +80,7 @@ function SidebarContent({ onNavigate }) {
         <Chip
           label={roleLabel}
           size="small"
-          sx={{ mt: 0.5, bgcolor: 'rgba(63,168,140,0.14)', color: 'primary.main', fontWeight: 600 }}
+          sx={{ mt: 0.5, bgcolor: 'rgba(74, 107, 168, 0.14)', color: 'primary.main', fontWeight: 600 }}
         />
       </Box>
       <ListItemButton onClick={logout} sx={{ borderRadius: 2 }}>
